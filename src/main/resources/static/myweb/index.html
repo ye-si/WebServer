@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的首页</title>
+</head>
+<body>
+    <!--
+        <h>标签:分为<h1>-<h6>表示各级标题。标题独占一行。
+        <center>标签:HTML5之后不再建议使用的标签。作用是将它包含的所有元素在浏览器
+                    上居中显示
+        <input>标签:输入组件，用于获取用户在页面上的输入。输入组件可以有多种样子
+                   具体可以通过type属性执行。例如:
+                   type="text":文本框
+                   type="password":密码框
+                   type="radio":单选框
+                   type="checkbox":复选框
+                   type="button":无事件按钮
+                   type="submit":提交按钮
+        <a>标签:超链接，标签中间指定超链接的文本信息，href属性用于指定点击后跳转
+               的位置
+        <br>标签:换行
+        <table>标签:表格。属性border用于指定边框。
+                    <table>标签中包含<tr>标签用于表示行
+                    <tr>标签中包含<td>标签用于表示列
+                    <td>标签中常见属性:
+                    align:对其方式。left左对齐,right右对齐,center剧中对其
+                    colspan:跨列合并列，合并是从左向右合并列
+                    rowspan:跨行合并列，合并是从上向下合并列
+     -->
+    <center>
+        <!--<h1>百度</h1>-->
+        <!--
+            <img>标签:图片，其中src用于指定图片的位置
+
+              在html页面上我们可以指定一个资源的路径以便加载或使用。例如超链接，图片
+              等标签上常常会指定一个路径。
+              路径有两种:
+              1:相对路径
+                页面上使用"./"表示当前目录时，由于html是被浏览器解释的，因此该路径
+                不能与在java源代码中使用"./"混淆(实际表示的路径不相同!)
+                浏览器在解释页面上的"./"时，是根据请求当前页面时URL中该页面所在的
+                目录:
+                例如:
+                请求当前首页。我们在浏览器输入的地址为:
+                http://localhost:8088/myweb/index.html
+                那么在index.html页面中若使用了"./"路径，则浏览器理解的实际位置:
+                http://localhost:8088/myweb/
+                因此若页面上<img src="./logo.png">
+                浏览器实际理解的该图片路径为:
+                http://localhost:8088/myweb/logo.png
+
+                相对路径在进行内部转发操作时可能导致定位失效。
+                http://localhost:8088/myweb/index123.html
+                404页面上
+                <img src="./404.png">
+                http://localhost:8088/myweb/404.png
+
+
+
+              "./"是URL中抽象路径中最后一个"/"的位置
+              "/"是URL中抽象路径中第一个"/"的位置
+              2:绝对路径
+                "/":根。指的位置是URL当中抽象路径开始的"/"
+                举例:                 v
+                http://localhost:8088/myweb/index.html
+                                     |----抽象路径-----|
+                在index.html页面上:
+                <img src="/myweb/logo.png">
+                          ^就是绝对路径中"/",对应URL中抽象路径部分起始的"/":
+                http://localhost:8088/myweb/index.html
+                                     ^
+                因此，浏览器理解该图片的实际位置:
+                http://localhost:8088/myweb/logo.png
+
+
+         -->
+        <img src="/myweb/logo.png"><br>
+        <input type="text" size="32">
+        <input type="button" value="百度一下" onclick="alert('点你妹啊!')">
+        <br>
+        <a href="/myweb/reg.html">用户注册</a>
+        <a href="/myweb/login.html">用户登录</a>
+        <a href="/myweb/showAllUser">用户列表</a>
+        <a href="/myweb/writeArticle.html">发表文章</a>
+        <a href="/myweb/showAllArticle">文章列表</a>
+        <br>
+        <a href="http://www.taobao.com">淘宝</a>
+        <br>
+        <table border="1">
+            <tr>
+                <td rowspan="2">第一列</td>
+                <td>第二列</td>
+                <td colspan="2" align="center">第三列</td>
+            </tr>
+            <tr>
+                <td>第二列</td>
+                <td>第三列</td>
+                <td>第四列</td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
